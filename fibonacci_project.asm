@@ -48,3 +48,8 @@ compute_fib:
     syscall
     li $v0, 4
     la $a0, space
+    syscall
+
+fib loop:
+    beq $t3, $t4, done
+    add $t5, $t1, $t2
