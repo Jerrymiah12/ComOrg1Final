@@ -37,4 +37,9 @@ compute_fib:
     move $t4, $t0
 
     li $v0, 1
-    move $a0, $t2
+    move $a0, $1
+    syscall
+    li $v0, 4
+    la $a0, space
+    syscall
+    
