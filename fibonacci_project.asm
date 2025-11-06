@@ -28,3 +28,8 @@ illegal:
 
 compute_fib: 
     li $v0, 4
+    la $a0, space
+    syscall
+
+    li $t1, 0
+    li $t2, 1
