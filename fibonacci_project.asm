@@ -42,4 +42,9 @@ compute_fib:
     li $v0, 4
     la $a0, space
     syscall
-    
+
+    li $v0, 1
+    move $a0, $t2
+    syscall
+    li $v0, 4
+    la $a0, space
