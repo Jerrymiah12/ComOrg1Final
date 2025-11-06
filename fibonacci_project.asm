@@ -33,3 +33,8 @@ compute_fib:
 
     li $t1, 0
     li $t2, 1
+    li $t3, 2
+    move $t4, $t0
+
+    li $v0, 1
+    move $a0, $t2
