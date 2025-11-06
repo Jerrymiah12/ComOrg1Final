@@ -53,3 +53,8 @@ compute_fib:
 fib loop:
     beq $t3, $t4, done
     add $t5, $t1, $t2
+
+    li $v0, 1
+    move $a0, $t5
+    syscall
+    li $v0, 4
