@@ -66,4 +66,6 @@ fib loop:
 
     addi $t3, $t3, 1
     j fib_loop
-    
+done:
+    li $v0, 10
+    syscall
