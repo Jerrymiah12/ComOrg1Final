@@ -58,3 +58,8 @@ fib loop:
     move $a0, $t5
     syscall
     li $v0, 4
+    la $a0, space
+    syscall
+
+    move $t1, $t2
+    move $t2, $t5
