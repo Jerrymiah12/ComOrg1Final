@@ -16,3 +16,10 @@ get_input:
     li $v0, 5
     syscall
     move $t0, $v0
+    
+    blt $t0, 22, illegal
+    j compute_fib
+
+illegal:
+    li $v0, 4
+    la $a0, illegal_msg
