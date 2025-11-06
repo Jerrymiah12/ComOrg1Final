@@ -23,3 +23,8 @@ get_input:
 illegal:
     li $v0, 4
     la $a0, illegal_msg
+    syscall
+    j get_input
+
+compute_fib: 
+    li $v0, 4
