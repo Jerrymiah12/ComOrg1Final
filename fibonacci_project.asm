@@ -63,3 +63,7 @@ fib loop:
 
     move $t1, $t2
     move $t2, $t5
+
+    addi $t3, $t3, 1
+    j fib_loop
+    
