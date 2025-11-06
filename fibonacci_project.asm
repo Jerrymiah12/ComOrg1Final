@@ -1,12 +1,11 @@
 .data
-prompt: .asciiz "Enter an integer N (N >= 22): "
-illegal_msg: .asciiz "Illegal Number!\n"
-fib_msg: .asciiz "Fibonacci sequence:\n"
-space: .asciiz " "
+prompt:        .asciiz "Enter an integer N (N >= 22): "
+illegal_msg:   .asciiz "Illegal Number!\n"
+fib_msg:       .asciiz "Fibonacci sequence:\n"
+space:         .asciiz " "
 
 .text
-.global main
-
+.globl main
 main:
 get_input:
     li $v0, 4
@@ -28,7 +27,7 @@ illegal:
 
 compute_fib: 
     li $v0, 4
-    la $a0, space
+    la $a0, fib_msg
     syscall
 
     li $t1, 0
@@ -37,7 +36,7 @@ compute_fib:
     move $t4, $t0
 
     li $v0, 1
-    move $a0, $1
+    move $a0, $t1
     syscall
     li $v0, 4
     la $a0, space
@@ -50,7 +49,7 @@ compute_fib:
     la $a0, space
     syscall
 
-fib loop:
+fib_loop:
     beq $t3, $t4, done
     add $t5, $t1, $t2
 
@@ -66,6 +65,7 @@ fib loop:
 
     addi $t3, $t3, 1
     j fib_loop
+
 done:
     li $v0, 10
     syscall
